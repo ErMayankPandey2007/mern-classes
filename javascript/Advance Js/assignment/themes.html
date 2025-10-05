@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themes-Changing</title>
+    <style>
+        
+        #btn{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        #btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+         #btn2{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            right: 90px;
+            top: 0px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        #btn2:hover {
+            background-color: white;
+            color: gray;
+        }
+
+        body.light {
+            background-color: #f0f0f0;
+            color: black;
+        }
+        body.dark {
+            background-color:black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="light">
+    <center> <h1>Changing Themes...</h1> </center>
+<div class="container">
+    <h1 id="text"></h1>
+    
+    <button onclick="ChangeTheme()" id="btn">Dark</button>
+    
+    <button onclick="Changetheme()" id="btn2">Light</button>
+</div>
+    <script>
+    function Changetheme() {
+        const body = document.body;
+        const btn2 = document.getElementById("btn2");
+        if (body.classList.contains("light")) {
+            body.classList.remove("light");
+            body.classList.add("light");
+            btn2.textContent = "light";
+            document.getElementById("text").innerHTML="Light Mode Activated";
+            document.getElementById("text").style.textAlign="center"
+        }  
+        else {
+            body.classList.remove("dark");
+            body.classList.add("light");
+            btn2.textContent = "light";
+            document.getElementById("text").innerHTML="Light Mode Activated";
+            document.getElementById("text").style.textAlign="center"
+        }
+    }
+
+    function ChangeTheme() {
+        const body = document.body;
+        const btn2 = document.getElementById("btn");
+        if (body.classList.contains("light")) {
+            body.classList.remove("light");
+            body.classList.add("dark");
+            // btn2.textContent = "Light";
+            document.getElementById("text").innerHTML="Dark Mode Activated";
+            document.getElementById("text").style.textAlign="center"
+        }  else {
+            body.classList.remove("dark");
+            body.classList.add("light");
+            // btn2.textContent = "Dark";
+            document.getElementById("text").innerHTML="Dark Mode Activated";
+            document.getElementById("text").style.textAlign="center"
+        }
+    }
+    </script>
+</body>
+</html>

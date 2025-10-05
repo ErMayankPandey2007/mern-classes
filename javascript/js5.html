@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 5</title>
+    <script>
+        function add(){
+            var a=document.getElementById("t1").value;
+            var b=document.getElementById("t2").value;
+            a=parseFloat(a);
+            b=parseFloat(b);
+
+            var c=a+b;
+            document.getElementById("t3").value=c;
+        }
+
+        function multi(){
+            var a=document.getElementById("t1").value;
+            var b=document.getElementById("t2").value;
+            a=parseFloat(a);
+            b=parseFloat(b);
+
+            var c=a*b;
+            document.getElementById("t3").value=c;
+        }
+    </script>
+</head>
+<body>
+    
+   Enter First Number-- <input type="text" id="t1"  placeholder="Enter First Number here--"><br><br>
+
+    Enter Second Number 
+    --<input type="text" id="t2" placeholder="Enter Second Number Here--"><br><br>
+
+   Result-- <input type="text" id="t3" placeholder="Here Your Result--"><br><br>
+
+    Add--<button onclick="add()">Add</button>
+    
+    Multiply--<button onclick="multi()">Multiply</button>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+    <script>
+        function sq(){
+            var a=document.getElementById("t1").value;
+            a=parseInt(a);
+            var square=a*a;
+            document.getElementById("t2").value=square;
+        }
+
+         function cube(){
+            var a=document.getElementById("t1").value;
+            a=parseInt(a);
+            var cube=a*a*a;
+            document.getElementById("t3").value=cube;
+        }
+    </script>
+</head>
+<body>
+    Enter Any Number:- <input type="text" name="" id="t1"><br>
+    square:- <input type="text" id="t2"><br>
+    cube:- <input type="text" id="t3"><br>
+    <button onclick="sq()">Square</button><br>
+    <button onclick="cube()">Cube</button>
+</body>
+</html>

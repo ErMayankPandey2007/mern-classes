@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events_JS</title>
+
+</head>
+<body>
+
+    <!-- onclick -------------------------------------------------------------------------->
+    <!-- inline js ------------------------------------------------------------------------>
+    <h1><center>examples</center></h1>
+    <!-- <button onclick="alert('button clicked')">onclick</button>
+
+<button onclick="sayHello()">Click me</button>
+
+<script>
+    function sayHello() {
+       var a=3;
+       var b=4
+       var c=a*b;
+       alert(c)
+    }
+</script> -->
+
+<!-- external js ----------------------------------------------------------------------->
+<!-- <button id="btn">Click me</button>
+<script>
+
+document.getElementById("btn").onclick=function(){
+    alert("hello external js")
+}
+</script>
+
+Event <listener------------------------------------------------------------------------->
+<!-- 
+<button id="mybtn">Click Me</button>
+<script>
+    const btn=document.getElementById("mybtn");
+function hello(){
+    alert("hello")
+}
+    // btn.addEventListener("click",()=>alert("click once!"));
+    btn.addEventListener("click",hello)
+    btn.addEventListener("click",()=>console.log("Also logged"))
+</script> -->
+
+
+<!-- addEventListener and removeEventListener -------------------------------------------->
+
+<!-- <button id="stop">Click</button>
+<script>
+    function sayHii(){
+        alert("hello")
+    }
+    const btn=document.getElementById("stop")
+    btn.addEventListener("click",sayHii)
+    console.log("event listener applied")
+    // remove event listener after 5second
+
+    setTimeout(()=>{
+        btn.removeEventListener("click",sayHii)
+
+        console.log("remove event listener!")
+    },5000)
+
+</script> -->
+
+
+
+<!-- Mouse Events --------------------------------------------------------------------------->
+
+<!-- <div id="box" style="width: 100px; height: 100px; background-color: aqua;"></div>
+
+<script>
+    const box=document.getElementById("box")
+    box.addEventListener("mouseover",()=>box.style.background="red")
+    setTimeout(()=>{
+        box.removeEventListener("")
+    })
+    box.addEventListener("mouseout",()=>box.style.background="aqua")
+    box.addEventListener("dblclick",()=>box.style.background="pink")
+    box.addEventListener("mousemove",()=>box.style.background="black")
+</script> -->
+
+
+
+<!-- keydown --------------------------------------------------------------------------------->
+
+<!-- <script>
+    document.addEventListener("keydown",(event)=>{
+        console.log("key down:",event.key)
+    })
+   
+</script> -->
+
+
+
+<!-- onchange() ------------------------------------------------------------------------------->
+
+<select name="" id="color" onchange="change_color()">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="pink">Pink</option>
+    <option value="black">Black</option>
+    <option value="yellow">Yellow</option>
+    <option value="purple">Purple</option>
+    <option value="white">white</option>
+</select>
+
+<script>
+function change_color(){
+    let selected_color=document.getElementById("color").value;
+    console.log(selected_color)
+    document.body.style.background=selected_color;
+}
+</script>
+
+    <!-- // <script src="events.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+JAVASCRIPT--------------------
+
+1- javascript is a client side language  also known as server side  language (node.js)
+
+
+How to Use!
+
+1. Inside html tag
+2. external script by saving (FileName.js)
+3.Internal script in head-<script></script>
+
+For Dynamic Use----
+
+HTML-Hyper Text Markup Language
+CSS-
+SRC FILE
+
+NOTE:-VS code software developed on the C# programming language and this software created by microsoft//
+CDN-Content Delivery Network
+
+JavaScript FrameWork--
+1.Angular:Typescript
+2.React:javascript- it is library framework of js
+3.Vue js:javascript
+
+
+Variables in JavaScript--
+1.var-var a=2;(global define)
+2.let-let a=2;(scope define)
+3.const-const a=4;

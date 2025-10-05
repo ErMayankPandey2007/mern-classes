@@ -1,0 +1,79 @@
+Asynchronous javascript concept :
+
+1.CallBacks:-A CallBacks is a function as an arguments to another function to be executed later:
+
+2.WHY IS CALLBACK?
+
+        A. Handling user input events.
+        B.Making API request or network calls.
+        C.Reading or writing files.
+        D.Executing database query.
+
+creating callBack function
+
+function callbackFunction(callback){
+    console.log("callback function executed");
+
+}
+
+function mainFunction(){
+    //do work
+    callback();
+
+}
+
+mainFunction(callbackFunction);
+
+        How callback work
+        1.mainFunction takes a callbackFunction as an arguments
+        2.The mainFunction executed its own code and the calls the callbackFunction
+        3.The callBack function is executed after mainFunction has completed its work
+
+
+Problems With CallBacks function:If multiple async task depend on each other ,callback may become nested.
+
+
+2.PROMISES:-
+Represent a value that may be available now ,later .or never.
+
+            1.Pending:-Initial state,neither FullFilled nor Rejected.
+            2.FullFilled:-successful operation,promise is resolved
+            3.Rejected:-Failed operation,promise rejected
+
+WHY USE PROMISES?
+
+
+        I.Making API request or network calls.
+        II.Reading and writing files.
+        III.Executing database query.
+        IV.Handling user input or events.
+
+        SYNTAX:-
+
+        .then((value) => {
+     
+        /// do something with value
+    }).catch((error) => {
+        /// handle error
+    })
+ 
+
+
+3.Async/Await
+A modern way to handle promise:
+
+ASYNC:-it makes a function return a promises
+
+AWAIT:- pauses the execution until the promises resolve / rejected
+
+        SYNTAX:-
+
+        async function Example(){
+            try{
+                const value=await promise:
+                ///handle successful
+            }
+            catch(error){
+                //handle failed operation
+            }
+        }

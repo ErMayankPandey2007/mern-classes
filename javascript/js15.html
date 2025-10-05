@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping Numbers</title>
+    <script>
+        function swap() {
+
+            // Before Swapping
+            var a = document.getElementById("t1").value
+            var b = document.getElementById("t2").value
+            a = parseFloat(a);
+            b = parseFloat(b);
+            // After Swapping 
+
+            // swapping using third variable
+
+            // var c = document.getElementById("t3").value = b;
+            // var d = document.getElementById("t4").value = a;
+
+            // swapping using without third variable
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            document.getElementById("t3").value = a;
+            document.getElementById("t4").value = b;
+            document.getElementById("t4").style.color="red";
+            document.getElementById("body").style.backgroundColor="red";
+            
+        }
+    </script>
+</head>
+
+<body id="body">
+    <h1>Before Swapping</h1>
+    Enter A Number:- <input type="text" id="t1">
+    <br>
+    <br>
+    Enter B Number:- <input type="text" id="t2">
+    <br><br>
+    <button onclick="swap()">Swap</button>
+    <br><br>
+    <h1>After Swapping</h1>
+    A After Swapping:- <input type="text" id="t3">
+    <br>
+    <br>
+    B After Swapping:- <input type="text" id="t4">
+    <br><br>
+</body>
+
+</html>

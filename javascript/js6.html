@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 6</title>
+    <script>
+        function sqr(){
+            var a=document.getElementById("t1").value;
+            a=parseFloat(a);
+            var c=a*a;
+            document.getElementById("t2").value=c;
+        }
+
+         function cube(){
+            var a=document.getElementById("t1").value;
+            a=parseFloat(a);
+            var c=a*a*a;
+            document.getElementById("t2").value=c;
+        }
+    </script>
+</head>
+<body>
+    Enter Any Number <input type="text" id="t1" placeholder="enter any number here--">
+    <br><br>
+    result <input type="text" id="t2" placeholder="result here">
+    <br><br>
+    <button onclick="sqr()">Square</button>
+    <button onclick="cube()">Cube</button>
+</body>
+</html>

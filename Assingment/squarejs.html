@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 560px;
+            width: 100%;
+            background: red;
+            display: flex;
+            /* margin-top: 300px; */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+            background-size: cover;
+            /* background-size: contain;
+            background-repeat: no-repeat; */
+           background-image: url("images/weather.jpg");
+        }
+
+        .div1 {
+            background-color: white;
+            width: 600px;
+            height: 300px;
+            /* margin-top: 20px; */
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 5px  black;
+        }
+
+        img {
+            width: 20px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 70%;
+            height: 40px;
+            margin-left: 0px;
+            position: relative;
+            top: 80px;
+            cursor: pointer;
+            background-color: cyan;
+            box-shadow: 3px 3px;
+        }
+
+        button:hover {
+            color: red;
+            background: rgb(65, 251, 65);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1">
+            <h2> FINDING SQUARE OF A NUMBER</h2>
+
+            <!-- Celsius input -->
+            Number:-<input type="number" name="" id="input1">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="images/loop.png" style="margin-top: 20px;" alt="">
+
+            <!-- Fahrenheit input -->
+            Square:-<input type="text"  id="input2">
+            <br><br>
+
+            <!-- convert button -->
+            <button onclick="square()">Square</button>
+        </div>
+    </div>
+
+    <!-- js file attached -->
+     <script>
+        function square(){
+            var num=document.getElementById("input1").value;
+
+            var sq=num*num;
+            document.getElementById("input2").value=sq;
+        }
+     </script>
+</body>
+
+</html> 

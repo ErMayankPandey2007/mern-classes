@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator By JS</title>
+
+    <style>
+        #input {
+            width: 137px;
+            background-color: rgb(206, 196, 196);
+            color: red;
+        }
+        button{
+            color: rgb(236, 75, 12);
+            background-color: rgb(172, 143, 148);
+            margin: 2px;
+        }
+    </style>
+    <script>
+        function ontap(value) {
+            document.getElementById("input").value += value;
+        }
+
+        function cleardata() {
+            document.getElementById("input").value = "0";
+        }
+
+        function result() {
+            var output = eval(document.getElementById("input").value);
+            document.getElementById("input").value = output;
+
+        }
+    </script>
+</head>
+
+<body>
+    <table border="5px">
+        <tr>
+            <input type="text" id="input" placeholder="calculate here-" disabled>
+            <td><button onclick="ontap('(')">(</button></td>
+            <td><button onclick="ontap(')')">)</button></td>
+            <td><button onclick="ontap('%')">%</button></td>
+            <td><button onclick="cleardata('AC')">AC</button></td>
+
+        </tr>
+
+        <tr>
+            <td><button onclick="ontap('7')">7</button></td>
+            <td><button onclick="ontap('8')">8</button></td>
+            <td><button onclick="ontap('9')">9</button></td>
+            <td><button onclick="ontap('/')">/</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="ontap('4')">4</button></td>
+            <td><button onclick="ontap('5')">5</button></td>
+            <td><button onclick="ontap('6')">6</button></td>
+            <td><button onclick="ontap('x')">x</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="ontap('1')">1</button></td>
+            <td><button onclick="ontap('2')">2</button></td>
+            <td><button onclick="ontap('3')">3</button></td>
+            <td><button onclick="ontap('-')">-</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="ontap('0')">0</button></td>
+            <td><button onclick="ontap('.')">.</button></td>
+            <td><button onclick="result('=')">=</button></td>
+            <td><button onclick="ontap('+')">+</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

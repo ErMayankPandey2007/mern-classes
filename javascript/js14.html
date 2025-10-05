@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Text By JS</title>
+
+    <script>
+        function song() {
+            document.getElementById("p").innerHTML = "Mm-mm Hm-mm, oh-oh Oh-oh-oh-oh Oh-oh-oh-oh, oh-oh Shohratein to nahi hain mili Naa raees hoon main bada Jeb mein hai nahi kuch magar Aas hai jo wo sun le zara Tere iss dil ko churaane ke liye Hai yahi ek dhun Sanam ko apna banaane ke liye Hai yahi ek dhun Hai yahi ek dhunHo-oh, aa-oh-oh Na-ne-ein-ein Oh-oh, n-n-n-na-n-na Ho-oh-oh-oh-oh Ho-oh-oh-oh Ho-oh-oh-oh, ho-ho Jab bhi barsaat aaye, palkon mein dhaank lunga Na kami koi khalegi, tujhe itna pyaar dunga Chaand-taare le aaun, hai ye to mumkin nahi Par vaada hai ye kasam se, tere saath main rahunga Tere saath main rahunga Ye main daawa nahi kar raha Koi Taj Mahal hai mera Naam ki chand deewarein hain Jinko hi ghar main kehta raha Tere iss ghar ko sajaane ke liye Hai yahi ek dhun Sanam ko apna banaane ke liye Hai yahi ek dhun Hai yahi ek dhun Ho-oh-oh-oh-oh Ho-oh-oh-oh Ek dhun Ho-oh-oh-oh-oh Ho-oh-oh-oh Ek dhun Tere iss dil ko churaane ke liye Hai yahi ek dhun" ;
+
+            
+            speak('Mm-mm Hm-mm, oh-oh Oh-oh-oh-oh Oh-oh-oh-oh, oh-oh Shohratein to nahi hain mili Naa raees hoon main bada Jeb mein hai nahi kuch magar Aas hai jo wo sun le zara Tere iss dil ko churaane ke liye Hai yahi ek dhun Sanam ko apna banaane ke liye Hai yahi ek dhun Hai yahi ek dhunHo-oh, aa-oh-oh Na-ne-ein-ein Oh-oh, n-n-n-na-n-na Ho-oh-oh-oh-oh Ho-oh-oh-oh Ho-oh-oh-oh, ho-ho Jab bhi barsaat aaye, palkon mein dhaank lunga Na kami koi khalegi, tujhe itna pyaar dunga Chaand-taare le aaun, hai ye to mumkin nahi Par vaada hai ye kasam se, tere saath main rahunga Tere saath main rahunga Ye main daawa nahi kar raha Koi Taj Mahal hai mera Naam ki chand deewarein hain Jinko hi ghar main kehta raha Tere iss ghar ko sajaane ke liye Hai yahi ek dhun Sanam ko apna banaane ke liye Hai yahi ek dhun Hai yahi ek dhun Ho-oh-oh-oh-oh Ho-oh-oh-oh Ek dhun Ho-oh-oh-oh-oh Ho-oh-oh-oh Ek dhun Tere iss dil ko churaane ke liye Hai yahi ek dhun ');
+        }
+          function speak(text){
+            const speech=new SpeechSynthesisUtterance(text);
+            speech.lang='en-US';
+            speechSynthesis.speak(speech);
+        }
+
+    </script>
+</head>
+<body>
+    <center><h1>Speaking Text By JS</h1></center>
+    <p id="p">Mm-mm
+Hm-mm, oh-oh
+Oh-oh-oh-oh
+Oh-oh-oh-oh, oh-oh
+Shohratein to nahi hain mili
+Naa raees hoon main bada
+Jeb mein hai nahi kuch magar
+Aas hai jo wo sun le zara
+
+Tere iss dil ko churaane ke liye
+Hai yahi ek dhun
+Sanam ko apna banaane ke liye
+Hai yahi ek dhun
+Hai yahi ek dhunHo-oh, aa-oh-oh
+Na-ne-ein-ein
+Oh-oh, n-n-n-na-n-na
+Ho-oh-oh-oh-oh
+Ho-oh-oh-oh
+Ho-oh-oh-oh, ho-ho
+Jab bhi barsaat aaye, palkon mein dhaank lunga
+Na kami koi khalegi, tujhe itna pyaar dunga
+Chaand-taare le aaun, hai ye to mumkin nahi
+Par vaada hai ye kasam se, tere saath main rahunga
+Tere saath main rahunga
+Ye main daawa nahi kar raha
+Koi Taj Mahal hai mera
+Naam ki chand deewarein hain
+Jinko hi ghar main kehta raha
+Tere iss ghar ko sajaane ke liye
+Hai yahi ek dhun
+Sanam ko apna banaane ke liye
+Hai yahi ek dhun
+Hai yahi ek dhun
+Ho-oh-oh-oh-oh
+Ho-oh-oh-oh
+Ek dhun
+Ho-oh-oh-oh-oh
+Ho-oh-oh-oh
+Ek dhun
+Tere iss dil ko churaane ke liye
+Hai yahi ek dhun
+</p>
+<button onclick="song()">PLAY</button>
+</body>
+</html>

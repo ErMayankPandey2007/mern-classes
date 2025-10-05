@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- addEventListener -->
+</head>
+<body>
+
+<button id="stop">Click</button>
+<script>
+    function sayHii(){
+        alert("hello")
+    }
+    const btn=document.getElementById("stop")
+    btn.addEventListener("click",sayHii)
+    console.log("event listener applied")
+    // remove event listener after 5second
+
+    setTimeout(()=>{
+        btn.removeEventListener("click",sayHii)
+
+        console.log("remove event listener!")
+    },5000)
+
+</script>
+
+
+
+
+
+    <!-- <script src="events.js"></script> -->
+</body>
+</html>

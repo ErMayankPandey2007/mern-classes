@@ -1,0 +1,46 @@
+ES6 + Concepts (let,const,arrow function,template literals,destruction,spread/rest,modules)
+
+let : block scoped reassinble
+
+const : block scoped can't reassinble
+
+
+let------------------------
+let count=5;
+count=10;   //allowed
+console.log(count)
+
+const---------------------------
+const pi=3.14
+pi=4;      //not assign
+console.log(pi)
+
+arrow------------------------------
+
+1.shortest syntax for function
+2.Does not bind own this
+
+----------------normal function-------------
+
+function add(a,b){
+    return a+b;
+}
+console.log(add(6,7))
+
+------------------------arrow function-----------
+
+const ad(a,b)=>a+b;
+console.log(add(4,5))
+
+-------------------------template----------------------
+
+Template literals
+1.use backticks(``)for string interpolation and multi line strings 
+
+
+
+----------------------------destruction----------------------
+Extra value from array or  object into variable
+
+
+

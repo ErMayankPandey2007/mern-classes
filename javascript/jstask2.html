@@ -1,0 +1,233 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Your Text</title>
+
+    <style>
+        #div1 {
+            height: 30px;
+            width: 100%;
+            background: rgb(250, 250, 144);
+        }
+
+        #div2 {
+            height: 30px;
+            width: 100%;
+            background: rgb(214, 214, 208);
+            margin-top: 10px;
+        }
+
+        #div3 {
+            height: 700px;
+            width: 100%;
+            background: rgb(152, 198, 216);
+            margin-top: 10px;
+            position: fixed;
+        }
+
+        #div4 {
+            height: 400px;
+            width: 600px;
+            background: rgb(215, 225, 230);
+            margin-left: 370px;
+            padding-top: 40px;
+            margin-top: 40px;
+        }
+
+        #refresh {
+            height: 30px;
+            width: 100px;
+            background-color: rgb(250, 38, 38);
+            text-align: center;
+            margin-left: 250px;
+            border-radius: 5px;
+            line-height: 25px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #h2 {
+            text-align: center;
+        }
+
+        #input {
+            margin-left: 30px;
+            width: 90%;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        #btn {
+            margin-left: 30px;
+            width: 160px;
+            background-color: rgb(38, 38, 250);
+            color: white;
+            font-weight: bold;
+            height:30px;
+            border-radius: 3px;
+
+        }
+
+        #btn1 {
+            margin-left: 30px;
+
+            width: 548px;
+            background-color: rgb(38, 38, 250);
+            height:30px;
+            border-radius: 3px;
+
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3">
+        <div id="div4">
+            <div id="refresh">Refresh</div>
+            <h2 id="h2">Style Your Text</h2>
+
+            <input type="text" id="input" placeholder="Type Your text here...">
+            <br><br>
+            <button id="btn" onclick="under()">Underline</button>
+            <button id="btn" onclick="font()">Increase Font</button>
+            <button id="btn" onclick="bold()">Bold</button>
+            <br><br>
+            <button id="btn" onclick="upper()">UpperCase </button>
+            <button id="btn" onclick="lower()">LowerCase</button>
+            <button id="btn" onclick="italic()">Italic</button><br><br>
+            <button id="btn1" onclick="capital()">Capitalize</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        function under(){
+            var a=document.getElementById("under").value;
+            var b=document.getElementById("input").value=b;
+        }
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Styler</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #fceabb, #f8b500);
+    }
+    .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 350px;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+    .output {
+        margin-top: 15px;
+        min-height: 40px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button onclick="refreshText()" style="background:red;">🔄 Refresh</button>
+    <h2>🎨 Style Your Text</h2>
+    <input type="text" id="inputText" placeholder="Type your text here...">
+    <br>
+    <button onclick="applyStyle('underline')">Underline</button>
+    <button onclick="applyStyle('increaseFont')">Increase Font</button>
+    <button onclick="applyStyle('bold')">Bold</button>
+    <br>
+    <button onclick="applyStyle('uppercase')">Uppercase</button>
+    <button onclick="applyStyle('lowercase')">Lowercase</button>
+    <button onclick="applyStyle('italic')">Italic</button>
+    <br>
+    <button onclick="applyStyle('capitalize')">Capitalize</button>
+
+    <div class="output" id="outputText"></div>
+</div>
+
+<script>
+    function applyStyle(action) {
+        let text = document.getElementById("inputText").value;
+        let output = document.getElementById("outputText");
+
+        switch(action) {
+            case 'underline':
+                output.style.textDecoration = "underline";
+                break;
+            case 'increaseFont':
+                output.style.fontSize = "24px";
+                break;
+            case 'bold':
+                output.style.fontWeight = "bold";
+                break;
+            case 'uppercase':
+                output.innerText = text.toUpperCase();
+                break;
+            case 'lowercase':
+                output.innerText = text.toLowerCase();
+                break;
+            case 'italic':
+                output.style.fontStyle = "italic";
+                break;
+            case 'capitalize':
+                output.innerText = text.replace(/\b\w/g, char => char.toUpperCase());
+                break;
+        }
+        if(action !== 'uppercase' && action !== 'lowercase' && action !== 'capitalize'){
+            output.innerText = text;
+        }
+    }
+
+    function refreshText() {
+        document.getElementById("inputText").value = "";
+        let output = document.getElementById("outputText");
+        output.innerText = "";
+        output.style = "";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Mail</title>
+    
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: wheat;
+        }
+        #start{
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            cursor: pointer;
+            color: white;
+           
+        }
+
+        #output{
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 20px;
+            border: 2px dashed #ccc;
+            background: #ffff;
+            min-height: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Voice to Text (Speech Recognition)</h2>
+    <button id="start">Start Listening</button>
+    <div id="output" aria-placeholder="Spoken text will appear here.."></div>
+
+    <script src="voice.js"></script>
+
+</body>
+</html>

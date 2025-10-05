@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Text</title>
+    <style>
+        #div1 {
+            background: rgb(233, 233, 136);
+            width: 100%;
+            height: 30px;
+        }
+
+        #div2 {
+            background: rgb(204, 204, 189);
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .div3 {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 100px;
+            height: 300px;
+            width: 500px;
+            margin-left: 420px;
+            background: #f8f3f3;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px 5px black;
+        }
+
+        .container {
+            background: white;
+            height: 100vh;
+        }
+
+        #btn {
+            background-color: blue;
+            color: white;
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+         button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+      button:hover {
+        background: #0056b3;
+    }
+     #refresh:hover {
+        background: #0056b3;
+    }
+      .output {
+        margin-top: 15px;
+        min-height: 40px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        border: 2px solid;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div class="div3">
+            <button id="refresh" onclick="refreshText()"
+                style="background:rgb(241, 6, 6); color: white; border-radius: 3px;">🔄 Refresh</button>
+            <h2>🎨 Style Your Text</h2>
+            <input type="text" id="inputText" placeholder="Type your text here...">
+            <br>
+            <button onclick="applyStyle('underline')">Underline</button>
+            <button onclick="applyStyle('increaseFont')">Increase Font</button>
+            <button onclick="applyStyle('bold')">Bold</button>
+            <br>
+            <button onclick="applyStyle('uppercase')">Uppercase</button>
+            <button onclick="applyStyle('lowercase')">Lowercase</button>
+            <button onclick="applyStyle('italic')">Italic</button>
+            <br>
+            <button onclick="applyStyle('capitalize')">Capitalize</button>
+
+            <div class="output" id="outputText"></div>
+        </div>
+    </div>
+
+    <script>
+    function applyStyle(action) {
+        let text = document.getElementById("inputText").value;
+        let output = document.getElementById("outputText");
+   
+        switch(action) {
+            case 'underline':z
+                output.style.textDecoration = "underline";
+                break;
+            case 'increaseFont':
+                output.style.fontSize = "24px";
+                break;
+            case 'bold':
+                output.style.fontWeight = "bold";
+                break;
+            case 'uppercase':
+                output.innerText = text.toUpperCase(); 
+                break;
+            case 'lowercase':
+                output.innerText = text.toLowerCase();
+                break;
+            case 'italic':
+                output.style.fontStyle = "italic";
+                break;
+            case 'capitalize':
+                output.innerText = text.replace(/\b\w/g, char => char.toUpperCase());
+                break;
+        }
+        if(action !== 'uppercase' && action !== 'lowercase' && action !== 'capitalize'){
+            output.innerText = text;
+        }
+    }
+
+    function refreshText() {
+        document.getElementById("inputText").value = "";
+        let output = document.getElementById("outputText");
+        output.innerText = "";
+        output.style = "";
+    }
+</script>   
+</body>
+
+</html>

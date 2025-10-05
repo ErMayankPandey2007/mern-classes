@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function image1() {
+            document.getElementById("img1").src = "images/img1.jpeg";
+        }
+          function image2() {
+            document.getElementById("img1").src = "images/img2.jpeg";
+        }
+          function image3() {
+            document.getElementById("img1").src = "images/img3.jpeg";
+        }
+          function image4() {
+            document.getElementById("img1").src = "images/img4.jpeg";
+        }
+    </script>
+    <style>
+        #img1 {
+            height: 500px;
+            width: 40%;
+
+        }
+
+        #img {
+            height: 100px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="img1" src="images/img1.jpeg" alt="main image">
+    <br>
+    <button onclick="image1()">
+        <img id="img" src="images/img1.jpeg" alt="image One">
+
+    </button>
+    <button onclick="image2()">
+        <img id="img" src="images/img2.jpeg" alt="image two">
+    </button>
+
+    <button onclick="image3()">
+        <img id="img" src="images/img3.jpeg" alt="image three">
+
+    </button>
+    <button onclick="image4()">
+        <img id="img" src="images/img4.jpeg" alt="image One">
+
+    </button>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+
+</head>
+
+<body>
+    <h1 id="title">Hello DOM</h1>
+    <p class="text">First Paragraph</p>
+    <p class="text">Second paragraph</p>
+
+    <script>
+        let heading = document.getElementById("title");
+        console.log(heading.innerText);
+
+        let paragraph = document.getElementsByClassName("text");
+        console.log(paragraph[0].innerText) + console.log(paragraph[1].innerText);
+
+        let tag = document.querySelector("p");
+        console.log(tag.innerText);
+
+
+        let all = document.querySelectorAll("p");
+        all.forEach((element) => {
+            console.log("all answer-", element.innerText);
+        });
+    </script>
+</body>
+
+</html>

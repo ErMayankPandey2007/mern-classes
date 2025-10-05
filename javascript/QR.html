@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR_CODE</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 40px;
+            /* background-color: sienna; */
+
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        
+        button {
+            cursor: pointer;
+            border: 1px solid blue;
+            border-radius: 10%;
+            box-shadow: 5px 5px;
+        }
+    </style>
+    <!-- qr code cdn -->
+
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+ 
+<!-- js barcode cdn -->
+ <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.12.1/dist/JsBarcode.all.min.js"></script>
+
+    <script>
+
+        // QR code generate
+        function generate() {
+            const name = document.getElementById("text").value;
+            document.getElementById("qrcode").innerHTML="";
+       
+
+        // generate qr code function
+
+        new QRCode(document.getElementById("qrcode"), {
+            text: name ,
+            width: 200,
+            height: 200
+        });
+
+        JsBarcode("#barcode",name,{
+            formate:"CODE128",
+            lineColor:"#000",
+            width:2,
+            height:60,
+            displayValue:true
+        });
+    }
+    </script>
+
+
+</head>
+
+<body>
+    <marquee behavior="alternate" scrollamount="20" direction="" style="background-color: rgb(224, 210, 210);"><h2>QR code Generate</h2></marquee>
+    <input type="text" id="text" placeholder="Enter Name"><br><br>
+    <button onclick="generate()">Generate</button>
+
+<center>
+    <div id="qrcode"></div>
+
+</center>  <br>
+<center>
+    <svg id="barcode"></svg>
+
+</center>     
+</body>
+
+</html>

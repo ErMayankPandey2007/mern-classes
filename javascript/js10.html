@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function ap() {
+            document.getElementById("capital").innerHTML = "Welcome To Hyderabad" ;
+            speak('Welcome To Hyderabad ');
+        }
+          function speak(text){
+            const speech=new SpeechSynthesisUtterance(text);
+            speech.lang='en-US';
+            speechSynthesis.speak(speech);
+        }
+
+    </script>
+</head>
+<body>
+      <center>
+        <h1 id="capital">CAPITAL</h1>
+    </center>
+    <button onclick="ap()">01.Andhra Pradesh</button>
+</body>
+</html>

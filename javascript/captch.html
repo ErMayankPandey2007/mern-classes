@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+   <script>
+     function getrandom(min,max){
+        var a=Math.random();
+        var b=a*(max-min)+min;
+        b=parseInt(b);
+        return b;
+    }
+
+
+    function refresh(){
+        var a=getrandom(0,9);
+        var b=String.fromCharCode(getrandom(65,90));
+        var c=String.fromCharCode(getrandom(65,90));
+        var d=getrandom(0,9)
+        var e=String.fromCharCode(getrandom(65,90));
+        var f=String.fromCharCode(getrandom(65,90));
+
+        var code=a+b+c+d+e+f;
+        document.getElementById("p1").innerHTML=code;
+        document.getElementById("p1").style.fontStyle="italic"
+    }
+    function submit(){
+        var a=document.getElementById("p1").innerHTML;
+        var b=document.getElementById("t1").value;
+        if(a==b){
+            alert("correct");
+        }
+        else{
+            alert("incorrect");
+        }
+    }
+   </script>
+   <style>
+    #p1{
+        background-image: url("images/captchbg.jpeg");
+        width: 10%;
+        color: rgb(21, 255, 0);
+    }
+   </style>
+</head>
+<body onload="refresh()">
+    <p id="p1"></p>
+    <br>
+    Enter Your Captcha: <input type="text" id="t1">
+    <br><br>
+    <button onclick="refresh()">Refresh</button>
+    <button onclick="submit()" type="submit">Submit</button>
+</body>
+</html>
